@@ -34,31 +34,43 @@ function generateHeader($title, $stylesheets = [])
 // Function to generate the navigation
 function generateNavagation()
 {
-  echo '
-  <nav class="navbar navbar-expand-lg navbar-dark position-relative" style="background-color: rgba(0, 0, 0, 0.6);">
-    <a class="navbar-brand" href="#">Need Logo Here!!</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="./home.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./menu.php">Menu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Location</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
- ';
+    echo '
+    <nav class="navbar navbar-expand-lg navbar-dark position-relative">
+        <div class="container">
+            <!-- Logo and Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="../media/logo.png" alt="Logo" class="logo">
+            </a>
+
+            <!-- Toggler button for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./home.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./menu.php">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./location.php">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.php">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    ';
 }
+
+
 
 // Function to generate a footer
 function generateFooter()
@@ -71,7 +83,7 @@ function generateFooter()
       <a href="https://twitter.com" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
       <a href="https://instagram.com" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
     </div>
-    <p>Visit us at Range Time, where great food meets great company.</p>
+    <p>Visit us at <a href="https://range-time.com">Range Time</a>, where great food meets Freedom.</p>
   </div>
 </footer>
 
@@ -89,70 +101,58 @@ function generateFooter()
 function generateMenu()
 {
   echo '
-  <div class="card-container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../media/burger.jpg" class="card-img-top" alt="Burger">
-          <div class="card-body">
-            <h5 class="card-title">Burgers</h5>
-            <p class="card-text">Juicy, grilled burgers topped with your favorite condiments.</p>
-          </div>
-        </div>
+  <div class="menu-container">
+    <div class="menu-item">
+      <img src="../media/burger.jpg" alt="Burger" class="menu-img">
+      <div class="menu-info">
+        <h3>Smash Burger</h3>
+        <p>Juicy, smashed thin seasoned patty topped with candied bacon, lettuce, garlic aioli, and smoked gouda cheese
+        served with fresh cut fries or chips.</p>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../media/cubano.jpg" class="card-img-top" alt="Fries">
-          <div class="card-body">
-            <h5 class="card-title">Cubano</h5>
-            <p class="card-text">Crispy and golden fries, perfect with any meal.</p>
-          </div>
-        </div>
+    </div>
+    <div class="menu-item">
+      <img src="../media/cubano.jpg" alt="Cubano" class="menu-img">
+      <div class="menu-info">
+        <h3>Cubano</h3>
+        <p>From the heartland of miami to your mouth.
+        Toasted Cubano roll with hand-made: mustard, pickles, and pickled red onion; slow braised mojo pork, swiss and Black Forest Ham.</p>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../media/jerk_chix.jpg" class="card-img-top" alt="Soda">
-          <div class="card-body">
-            <h5 class="card-title">Soda</h5>
-            <p class="card-text">Wash it all down with an ice-cold soda.</p>
-          </div>
-        </div>
+    </div>
+    <div class="menu-item">
+      <img src="../media/jerk_chix.jpg" alt="Jerk Chicken" class="menu-img">
+      <div class="menu-info">
+        <h3>Jerk Chicken</h3>
+        <p>The sanwhich that is just as spicy ad it is sweet. Jerk marinated chicken, fresh pico de gallo, and grilled pinapple, served on a toasted Kaiser roll and served with french fried.</p>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../media/cheesesteak.jpg" class="card-img-top" alt="Soda">
-          <div class="card-body">
-            <h5 class="card-title">Soda</h5>
-            <p class="card-text">Wash it all down with an ice-cold soda.</p>
-          </div>
-        </div>
+    </div>
+    <div class="menu-item">
+      <img src="../media/cheesesteak.jpg" alt="Cheesesteak" class="menu-img">
+      <div class="menu-info">
+        <h3>Cheesesteak</h3>
+        <p>Shaved ribeye and served with grilled peppers, onion, and covered in melted gouda nad white cheddar. Served with fresh cut fries.</p>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../media/grilled_chz.jpg" class="card-img-top" alt="Soda">
-          <div class="card-body">
-            <h5 class="card-title">Soda</h5>
-            <p class="card-text">Wash it all down with an ice-cold soda.</p>
-          </div>
-        </div>
+    </div>
+    <div class="menu-item">
+      <img src="../media/grilled_chz.jpg" alt="Grilled Cheese" class="menu-img">
+      <div class="menu-info">
+        <h3>Grilled Cheese</h3>
+        <p>Delicious Twist on a cult classic
+        Toasted Brioche with candied bacon and tomato. Smothered in melty smoked gouda and white cheddar. .</p>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../media/taco.jpg" class="card-img-top" alt="Soda">
-          <div class="card-body">
-            <h5 class="card-title">Soda</h5>
-            <p class="card-text">Wash it all down with an ice-cold soda.</p>
-          </div>
-        </div>
+    </div>
+    <div class="menu-item">
+      <img src="../media/taco.jpg" alt="Taco" class="menu-img">
+      <div class="menu-info">
+        <h3>Taco</h3>
+        <p>The fastest selling item to date.
+        Three fried flour taco shells served with lemon poppey slaw, Mojo braised pork tossed in home made Jerk sauce, fresh pico de gallo, and chipotle aioli. Served with homemade tortilla chips so you can turn your droppings into nachos.</p>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../media/tendy.jpg" class="card-img-top" alt="Soda">
-          <div class="card-body">
-            <h5 class="card-title">Soda</h5>
-            <p class="card-text">Wash it all down with an ice-cold soda.</p>
-          </div>
-        </div>
+    </div>
+    <div class="menu-item">
+      <img src="../media/tendy.jpg" alt="Tenders" class="menu-img">
+      <div class="menu-info">
+        <h3>Tenders</h3>
+        <p>Crispy, golden chicken tenders that are a crowd favorite.</p>
       </div>
     </div>
   </div>';

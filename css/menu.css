@@ -1,60 +1,60 @@
-.card-container {
-    margin: 20px;
-    display: flex;
-    flex-wrap: wrap;
+/* Main container: Use CSS grid for alignment */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-/* Ensure some spacing between the cards */
+    padding: 20px;
+    margin: 20px 0;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    flex-basis: calc(25% - 20px);
-    /* 4 items per row */
-    min-width: 250px;
-    /* Set a minimum width */
-    max-width: 300px;
-    /*prevent cards from becoming too wide */
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    /* Ensure no overlap with elements below */
-    background-color: var(--highlight-color);
-    border-color: var(--secondary-color);
-
-}
-
-@media (max-width: 1200px) {
-    .card {
-        flex-basis: calc(33.33% - 20px);
-        /* 3 items per line */
-    }
-}
-
-@media (max-width: 900px) {
-    .card {
-        flex-basis: calc(50% - 20px);
-        /* 2 items per line */
-    }
-}
-
-@media (max-width: 600px) {
-    .card {
-        flex-basis: calc(100% - 20px);
-        /* 1 item per line */
-    }
-}
-
-.card:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    transform: scale(1.05);
+/* Menu item styling: image and description */
+.menu-item {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-img-top {
+.menu-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
+/* Image styling */
+.menu-img {
     width: 100%;
-    /* Make the image fill the width of its container */
     height: 300px;
-    /* Set a fixed height */
     object-fit: cover;
-    /* Ensures the image covers the entire area without distortion */
+    display: block;
+}
+
+/* Info section below the image */
+.menu-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.menu-info p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .menu-img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-img {
+        height: 120px;
+    }
 }
